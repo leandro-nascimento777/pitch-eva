@@ -246,21 +246,27 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   .mf:first-child,.mf:last-child{border-radius:16px}
   nav{padding:12px 20px}
   .nav-tag{display:none}
-  #problema,#mulheres,#modelo,#produtos{padding-left:20px;padding-right:20px}
+  #problema,#mulheres,#modelo,#produtos,#sakura-real{padding-left:20px;padding-right:20px}
+  #sakura-real .data-grid{grid-template-columns:repeat(2,1fr)}
+  #sakura-real .data-grid > div{border-radius:20px}
   .split-row{grid-template-columns:1fr 1fr 1fr}
   .prg{grid-template-columns:1fr}
 }
 
 @media(max-width:700px){
+  #hero{padding:100px 20px 60px}
+  #problema,#stats,#sakura-real,#mulheres,#perfis,#simulador,#produtos,#modelo,#cta{padding-left:16px;padding-right:16px}
   .stats-grid{grid-template-columns:1fr}
   .perfis-scroll{grid-template-columns:1fr}
   .prod-grid{grid-template-columns:1fr}
   .sim-stage{grid-template-columns:1fr}
-  .mwrap .mtrack{grid-template-columns:1fr}
+  .mwrap .mtrack{grid-template-columns:1fr;width:100%}
+  .mtrack{padding:8px 0}
+  .sc{min-width:0}
   .panel{min-height:auto}
-  .phone{max-width:320px}
-  .screen{height:auto;min-height:540px}
-  .chat-area{padding:10px}
+  .phone{max-width:100%;min-width:240px}
+  .screen{height:auto;min-height:520px}
+  .chat-area{padding:10px;max-height:420px}
   .chat-input{flex-direction:column;align-items:stretch}
   .chat-input button{width:100%}
   .chat-ctrl{flex-direction:column}
@@ -270,6 +276,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   .nav{padding:12px 18px}
   .sec-title{font-size:clamp(28px,7vw,42px)}
   .hero-name{font-size:clamp(72px,22vw,140px)}
+  .split-row{grid-template-columns:1fr;gap:8px}
+  .prg{grid-template-columns:1fr}
+  .stat-box,.perfil-card,.fear-card,.prod-card,.mf,.panel,.bnum,.proj{width:100%}
+  .bnum .val{font-size:40px}
 }
 
 @media(max-width:520px){
@@ -279,8 +289,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   .hero-scroll{font-size:10px}
   .stat-box{padding:32px 24px}
   .perfis-scroll{grid-template-columns:1fr}
-  .profil-card,.prod-card,.mf{padding:20px}
+  .perfil-card,.prod-card,.mf{padding:20px}
   .prod-card{min-height:auto}
+  #sakura-real .data-grid{grid-template-columns:1fr;gap:14px}
   .sim-inner{padding:0 12px}
   .phone{max-width:100%}
   .screen{height:auto;min-height:460px}
@@ -288,6 +299,17 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   .proj .pr{font-size:12px}
   .proj .pt{font-size:9px}
   .fbar{font-size:10px;padding:20px}
+  #hero{padding:80px 14px 60px}
+  #problema,#stats,#sakura-real,#mulheres,#perfis,#simulador,#produtos,#modelo,#cta{padding-left:14px;padding-right:14px}
+  .sec-lead{max-width:100%;padding:0 4px}
+  .prg{grid-template-columns:1fr}
+  .split-row{grid-template-columns:1fr;gap:8px}
+  .prbox{padding:12px 10px}
+  .chat-area{max-height:360px}
+  .panel{padding:18px}
+  .phone{padding:8px}
+  .hero-name{font-size:clamp(60px,24vw,100px)}
+  .stat-box .num{font-size:clamp(42px,7vw,64px)}
 }
 </style>
 </head>
@@ -356,7 +378,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
     <h2 class="sec-title">Esses são os números<br>da Sakura <em style="color:var(--pk);font-style:normal">hoje</em>.</h2>
     <p class="sec-lead">Janeiro a junho de 2026. Dados reais de emissão. É sobre essa base que Eva opera.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px">
+    <div class="data-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px">
       <div style="padding:36px 28px;background:rgba(255,255,255,.025);border:1px solid var(--ln);border-radius:20px 0 0 20px">
         <div style="font-family:var(--ff-i);font-size:clamp(42px,6vw,80px);color:var(--pk);line-height:.9;letter-spacing:-2px">425.633</div>
         <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:12px;color:rgba(255,255,255,.9)">Tickets emitidos<br>Jan–Jun 2026</div>
